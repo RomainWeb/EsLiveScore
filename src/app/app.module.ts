@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 //Import Material Design Modules
 import { MatButtonModule, MatListModule, MatIconModule, MatIconRegistry, MatCardModule, MatMenuModule, MatInputModule, MatButtonToggleModule,
@@ -17,11 +18,21 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/layout/header.component';
+import { HomeComponent } from './components/home/home.component';
 
+const routes: Routes = [
+  { path: '', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+  ],
+  exports:[
+    RouterModule
   ],
   imports: [
     BrowserModule,
@@ -64,6 +75,7 @@ import { AppComponent } from './app.component';
     CovalentMenuModule,
     CovalentDataTableModule,
     CovalentMessageModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent]
