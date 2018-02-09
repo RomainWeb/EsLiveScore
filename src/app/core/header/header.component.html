@@ -1,7 +1,9 @@
-<div layout="row" layout-align="start center" flex>
-  <span hide-gt-xs class="tc-blue-500 mat-subhead">Landing</span>
-  <span hide-xs class="tc-blue-500 mat-subhead">Landing Page</span>
-  <span flex ></span>
+<mat-toolbar layout="row" layout-align="start center" flex>
+  <button mat-icon-button td-menu-button (click)="sidenavToggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Activ'Learning</span>
+  <span flex></span>
   <button mat-icon-button [matMenuTriggerFor]="notificationsMenu">
     <td-notification-count color="accent" [notifications]="12">
       <mat-icon>notifications</mat-icon>
@@ -34,4 +36,4 @@
       </a>
     </td-menu>
   </mat-menu>
-</div>
+</mat-toolbar>

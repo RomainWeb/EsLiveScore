@@ -1,0 +1,6 @@
+<a mat-tab-link 
+   [active]="link.IsActive"
+   [routerLink]="link.route">
+    <span hide-xs>{{ link.title }}</span>
+    <span hide-gt-xs><mat-icon>{{ link.icon }}</mat-icon></span>
+</a>

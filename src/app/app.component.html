@@ -1,43 +1,16 @@
 <!-- app.component.html -->
-<td-layout>
-    <td-layout-nav color="none" logo="assets:covalent"  navigationRoute="/">
-      <button mat-icon-button td-menu-button tdLayoutToggle>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <div td-toolbar-content flex>
-        <esls-header></esls-header>
-      </div>
-      <mat-toolbar class="pad-none">
-        <nav mat-stretch-tabs mat-tab-nav-bar class="pull-bottom-xl pull-top-md text-upper" flex>
-          <a mat-tab-link [active]="true">
-            <span hide-xs>Home</span>
-            <span hide-gt-xs><mat-icon>home</mat-icon></span>
-          </a>
-          <a mat-tab-link>
-            <span hide-xs>Technology</span>
-            <span hide-gt-xs><mat-icon>laptop_mac</mat-icon></span>
-          </a>
-          <a mat-tab-link>
-            <span hide-xs>Locations</span>
-            <span hide-gt-xs><mat-icon>language</mat-icon></span>
-          </a>
-          <a mat-tab-link>
-            <span hide-xs>Job Openings</span>
-            <span hide-gt-xs><mat-icon>assignment</mat-icon></span>
-          </a>
-          <a mat-tab-link>
-            <span hide-xs>Leadership</span>
-            <span hide-gt-xs><mat-icon>people</mat-icon></span>
-          </a>
-        </nav>
-      </mat-toolbar>
-      <!-- router outlet goes here -->
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="over">
+    Sidenav content
+  </mat-sidenav>
 
-      <router-outlet></router-outlet>
-    <td-layout-footer>
-    <div layout="row" layout-align="start center">
-        <span class="mat-caption">Made with <mat-icon class="text-md">favorite</mat-icon> using <a href="http://getcovalent.com" class="text-nodecoration tc-blue-700">Covalent</a>, built on Angular v4 + Angular Material.</span>
-    </div>
-    </td-layout-footer>
-</td-layout-nav>
-</td-layout>
+  <mat-sidenav-content>
+    <!-- header here -->
+    <esls-header></esls-header>
+    <esls-nav></esls-nav>
+
+    <!-- Router Outlet here -->
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
