@@ -16,6 +16,7 @@ import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { TeamsComponent } from './components/teams/teams.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    TeamsComponent,
   ],
   exports:[
   ],

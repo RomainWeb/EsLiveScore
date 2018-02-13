@@ -1,5 +1,10 @@
 <mat-toolbar class="pad-none z-depth-bot-4">
-  <nav mat-stretch-tabs mat-tab-nav-bar class="hoverable push-top text-upper" flex>
+  <nav mat-stretch-tabs 
+       mat-tab-nav-bar 
+       class="hoverable push-top text-upper" 
+       layout="row" 
+       layout-align="center center" 
+       flex>
     <esls-link *ngFor="let item of navList" [link]="item" ></esls-link>
   </nav>
 </mat-toolbar>
