@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { TdMediaService } from '@covalent/core';
 
 @Component({
@@ -7,4 +7,9 @@ import { TdMediaService } from '@covalent/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild('sidenav') sidenav
+
+  toggleSidenav(evt: Event) {
+    this.sidenav.toggle();
+  }
 }

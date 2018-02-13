@@ -2,38 +2,10 @@
   <button mat-icon-button td-menu-button (click)="sidenavToggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Activ'Learning</span>
-  <span flex></span>
-  <button mat-icon-button [matMenuTriggerFor]="notificationsMenu">
-    <td-notification-count color="accent" [notifications]="12">
-      <mat-icon>notifications</mat-icon>
-    </td-notification-count>
-  </button>
-  <mat-menu #notificationsMenu="matMenu">
-    <td-menu>
-      <div td-menu-header class="mat-subhead">Job Openings</div>
-      <mat-nav-list dense>
-        <a mat-list-item>
-          <mat-icon mat-list-avatar>fiber_new</mat-icon>
-          <h4 matLine><span class="text-wrap">Sr. Frontend Engineer</span></h4>
-          <p matLine>UX team</p>
-        </a>
-        <mat-divider></mat-divider>
-        <a mat-list-item>
-          <mat-icon mat-list-avatar>fiber_new</mat-icon>
-          <h4 matLine><span class="text-wrap">Sr. Data Scientist</span></h4>
-          <p matLine>Data science team</p>
-        </a>
-        <mat-divider></mat-divider>
-        <a mat-list-item>
-          <mat-icon mat-list-avatar>fiber_new</mat-icon>
-          <h4 matLine><span class="text-wrap">Sr. DevOps Engineer</span></h4>
-          <p matLine>DevOps team</p>
-        </a>
-      </mat-nav-list>
-      <a mat-button color="accent" td-menu-footer>
-        View Jobs
-      </a>
-    </td-menu>
-  </mat-menu>
+  <span><h3>Esport Live Score</h3></span>
+  <span flex>
+    <td-search-box backIcon="arrow_back" placeholder="Search here" [(ngModel)]="searchInputTerm" [showUnderline]="true" [debounce]="500" [alwaysVisible]="false" (searchDebounce)="searchInputTerm = $event" (search)="searchInputTerm = $event" (clear)="searchInputTerm = ''">
+    </td-search-box>
+  </span>
+  <esls-right-column></esls-right-column>
 </mat-toolbar>

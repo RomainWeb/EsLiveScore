@@ -1,12 +1,12 @@
 <!-- app.component.html -->
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="over">
+  <mat-sidenav #sidenav mode="side">
     Sidenav content
   </mat-sidenav>
 
   <mat-sidenav-content>
     <!-- header here -->
-    <esls-header></esls-header>
+    <esls-header (sidenavToggled)="toggleSidenav($event)"></esls-header>
     <esls-nav></esls-nav>
 
     <!-- Router Outlet here -->

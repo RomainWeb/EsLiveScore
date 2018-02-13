@@ -3,16 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'esls-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
 
   navList: any = [
-    { title: "Home", icon: 'home', IsActive: true, route: "/" },
-    { title: "Technology", icon: 'laptop_mac', IsActive: false, route: "/" },
-    { title: "Locations", icon: 'language', IsActive: false, route: "/" },
-    { title: "Job Openings", icon: 'assignment', IsActive: false, route: "/" },
-    { title: "Leadership", icon: 'people', IsActive: false, route: "/" },
+    { title: "League of legend", imgPath: 'lol.png', route: "/" },
+    { title: "Dota 2", imgPath: 'dota2.png', route: "/" },
+    { title: "Heathstone", imgPath: 'hots.png', route: "/" },
+    { title: "Fifa 18", imgPath: 'fifa.png', route: "/" },
+    { title: "Overwatch", imgPath: 'overwatch.png', route: "/" },
+    { title: "CSGO", imgPath: 'csgo.png', route: "/" },
   ]
 
   constructor() { }

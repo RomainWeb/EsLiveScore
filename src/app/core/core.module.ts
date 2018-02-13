@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { LinkComponent } from './nav/link/link.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { RightColumnComponent } from './header/right-column/right-column.component';
 
 @NgModule({
   imports: [
@@ -65,6 +66,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     NavComponent,
     LinkComponent,
     SidenavComponent,
+    RightColumnComponent,
   ],
   exports: [
     HeaderComponent,
