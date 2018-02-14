@@ -2,20 +2,7 @@
   <button mat-icon-button td-menu-button (click)="sidenavToggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span><h3>Esport Live Score</h3></span>
+  <span><h3>Activ'learning</h3></span>
   <span flex></span>
-  <span flex>
-    <td-search-box 
-        backIcon="arrow_back" 
-        placeholder="Search here" 
-        [(ngModel)]="searchInputTerm" 
-        [showUnderline]="true" 
-        [debounce]="500" 
-        [alwaysVisible]="false" 
-        (searchDebounce)="searchInputTerm = $event" 
-        (search)="searchInputTerm = $event" 
-        (clear)="searchInputTerm = ''">
-    </td-search-box>
-  </span>
   <esls-right-column></esls-right-column>
 </mat-toolbar>

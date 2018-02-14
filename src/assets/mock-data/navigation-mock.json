@@ -1,0 +1,158 @@
+[
+    {
+        "modules": [
+            {
+                "uid": 0,
+                "title": "Digital Training Intro",
+                "description": "Description Digital Training Intro",
+                "IsActive": true,
+                "chapters": [
+                    {
+                        "uid": 0,
+                        "title": "Digital Training Intro",
+                        "description": "Description Digital Training Intro",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 0,
+                                "title": "Digital Training Intro",
+                                "description": "Description Digital Training Intro",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "uid": 1,
+                        "title": "Digital Training Intro",
+                        "description": "Description Digital Training Intro",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 1,
+                                "title": "Other resources",
+                                "description": "Description Other resources",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "uid": 2,
+                        "title": "Digital Training Intro",
+                        "description": "Description Digital Training Intro",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 2,
+                                "title": "What's new",
+                                "description": "Description What's new",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": 1,
+                "title": "iPPM Program",
+                "description": "description iPPM Program",
+                "IsActive": true,
+                "chapters": [
+                    {
+                        "uid": 3,
+                        "title": "iPPM Overview",
+                        "description": "Description iPPM Overview",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 3,
+                                "title": "iPPM General Principles",
+                                "description": "Description iPPM General Principles",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            },
+                            {
+                                "uid": 4,
+                                "title": "iPPM users",
+                                "description": "Description iPPM users",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            },
+                            {
+                                "uid": 5,
+                                "title": "Recommended curriculum per role",
+                                "description": "Description Recommended curriculum per role",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "uid": 4,
+                        "title": "View Portfolio, from BU to SO",
+                        "description": "View Portfolio, from BU to SO",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 6,
+                                "title": "What is it?",
+                                "description": "Description What is it?",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            },
+                            {
+                                "uid": 7,
+                                "title": "Main steps",
+                                "description": "Description Main steps",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            },
+                            {
+                                "uid": 8,
+                                "title": "How to view Full Portfolio, from BU to Item",
+                                "description": "Description How to view Full Portfolio, from BU to Item",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            },
+                            {
+                                "uid": 8,
+                                "title": "How to view Full Portfolio, from Item to SO",
+                                "description": "Description How to view Full Portfolio, from Item to SO",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            },
+                            {
+                                "uid": 9,
+                                "title": "Quiz",
+                                "description": "Description Quiz",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "quiz"
+                            },
+                            {
+                                "uid": 10,
+                                "title": "Simulation",
+                                "description": "Description Simulation",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "simulation"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

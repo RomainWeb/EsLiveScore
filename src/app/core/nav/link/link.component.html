@@ -1,6 +1,6 @@
 <a mat-tab-link 
-    [active]="link.IsActive"
+    [active]="isActive"
     [routerLink]="link.route">
-        <span><img src="assets/img/{{link.imgPath}}" class="nav-logo" /></span>
+        <span><mat-icon matListIcon fontSet="fa" [fontIcon]="link.icon"></mat-icon></span>
         <span hide-md>{{ link.title }}</span>
 </a>

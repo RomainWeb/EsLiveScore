@@ -14,7 +14,7 @@
  // Define the palettes for your theme using the Material Design palettes available in palette.scss
  // (imported above). For each palette, you can optionally specify a default, lighter, and darker
  // hue.
- $primary: mat-palette($mat-light-blue, 700);
+ $primary: mat-palette($mat-blue, 500);
  $accent:  mat-palette($mat-orange, 800, A100, A400);
  
  // The warn palette is optional (defaults to red).
@@ -41,6 +41,18 @@
          }
      }
  }
+
+.header-nav-tabs .mat-tab-links{
+    esls-link .mat-tab-label-active, .mat-tab-label-active{
+        mat-icon{
+            color: mat-color($accent, darker);
+        }
+    }
+
+    mat-ink-bar{
+        height: 5px !important;
+    }
+}
  
  /* ------------------------------------------------------------------------------- */
  $foreground: map-get($theme, foreground);
@@ -63,16 +75,4 @@
  }
  .legend-title-text {
      color: mat-color($foreground, secondary-text);
- }
- mat-card-title{
-   &:hover {
-     cursor: grab;
-     cursor: -moz-grab;
-     cursor: -webkit-grab;
-   }
-   &:active {
-     cursor: grabbing;
-     cursor: -moz-grabbing;
-     cursor: -webkit-grabbing;
-   }
  }

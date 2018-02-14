@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'esls-nav',
   templateUrl: './nav.component.html',
+  styleUrls: ['nav.component.scss'],
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, AfterViewInit {
 
   navList: any = [
-    { title: "League of legend", imgPath: 'lol.png', route: "/" },
-    { title: "Dota 2", imgPath: 'dota2.png', route: "/" },
-    { title: "Heathstone", imgPath: 'hots.png', route: "/" },
-    { title: "Fifa 18", imgPath: 'fifa.png', route: "/" },
-    { title: "Overwatch", imgPath: 'overwatch.png', route: "/" },
-    { title: "CSGO", imgPath: 'csgo.png', route: "/" },
+    { title: "Home", icon: 'fa-home', route: "/" },
+    { title: "Digital Training Intro", icon: 'fa-tasks', route: "/" },
+    { title: "iPPM Program", icon: 'fa-book', route: "/" },
+    { title: "Using iPPM", icon: 'fa-pencil-alt', route: "/" }
   ]
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    
   }
 
 }

@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule, MatListModule, MatIconModule, MatIconRegistry, MatCardModule, MatMenuModule, MatInputModule, MatButtonToggleModule,
   MatProgressSpinnerModule, MatSelectModule, MatSlideToggleModule, MatDialogModule, MatSnackBarModule, MatToolbarModule,
   MatTabsModule, MatSidenavModule, MatTooltipModule, MatRippleModule, MatRadioModule, MatGridListModule,
-  MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule } from '@angular/material';
+  MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule, MatDividerModule, 
+  MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Import Covalent Modules
@@ -34,11 +35,13 @@ import { RightColumnComponent } from './header/right-column/right-column.compone
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatDividerModule,
     MatSnackBarModule,
     MatToolbarModule,
     MatTabsModule,
     MatSidenavModule,
     MatTooltipModule,
+    MatExpansionModule,
     MatRippleModule,
     MatRadioModule,
     MatGridListModule,
@@ -85,8 +88,10 @@ import { RightColumnComponent } from './header/right-column/right-column.compone
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatDividerModule,
     MatSnackBarModule,
     MatToolbarModule,
+    MatExpansionModule,
     MatTabsModule,
     MatSidenavModule,
     MatTooltipModule,

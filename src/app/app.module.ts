@@ -16,7 +16,7 @@ import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { TeamsComponent } from './components/teams/teams.component';
+import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { TeamsComponent } from './components/teams/teams.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    TeamsComponent,
+    PageNotFoundComponent,
   ],
   exports:[
   ],
