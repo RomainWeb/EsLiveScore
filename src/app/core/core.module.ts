@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 //Import Material Design Modules
 import { MatButtonModule, MatListModule, MatIconModule, MatIconRegistry, MatCardModule, MatMenuModule, MatInputModule, MatButtonToggleModule,
   MatProgressSpinnerModule, MatSelectModule, MatSlideToggleModule, MatDialogModule, MatSnackBarModule, MatToolbarModule,
   MatTabsModule, MatSidenavModule, MatTooltipModule, MatRippleModule, MatRadioModule, MatGridListModule,
-  MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule, MatDividerModule, 
+  MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule, MatDividerModule, MatProgressBarModule,
   MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -23,6 +24,7 @@ import { RightColumnComponent } from './header/right-column/right-column.compone
   imports: [
     CommonModule,
     RouterModule,
+    HttpClientModule,
     /** Material Modules */
     MatButtonModule,
     MatListModule,
@@ -34,6 +36,7 @@ import { RightColumnComponent } from './header/right-column/right-column.compone
     MatButtonToggleModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
     MatDialogModule,
     MatDividerModule,
     MatSnackBarModule,
@@ -76,6 +79,7 @@ import { RightColumnComponent } from './header/right-column/right-column.compone
     NavComponent,
     LinkComponent,
     SidenavComponent,
+    HttpClientModule,
     /** Material Modules */
     MatButtonModule,
     MatListModule,
@@ -87,6 +91,7 @@ import { RightColumnComponent } from './header/right-column/right-column.compone
     MatButtonToggleModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
     MatDialogModule,
     MatDividerModule,
     MatSnackBarModule,

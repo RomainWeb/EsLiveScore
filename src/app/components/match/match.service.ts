@@ -3,13 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Match } from '../../shared/models/match.model';
+import { AppConfig } from '../../app-config';
 
 @Injectable()
 export class MatchService {
-
-  constructor(private _http: HttpClient) { }
+    constructor(private _http: HttpClient) { }
   
-  getMatches(): Observable<Match[]>{
-    return null;
+  getMatchesUpcoming(): Observable<any>{
+    return this._http
+              .get<any>(`${AppConfig.API_PANDASCORE_URL}/matches/upcoming`, {
+                headers: AppConfig.API_PANDASCORE_HEADER
+              });
   }
 }

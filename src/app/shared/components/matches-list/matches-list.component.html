@@ -1,0 +1,4 @@
+<mat-progress-bar mode="indeterminate" *ngIf="!matchesList"></mat-progress-bar>
+<mat-accordion>
+  <esls-match-item *ngFor="let match of matchesList" [match]="match"></esls-match-item>
+</mat-accordion>

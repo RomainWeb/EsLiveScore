@@ -14,9 +14,15 @@ import { AppRoutingModule } from './app-routing.module';
 //Import Core Module
 import { CoreModule } from './core/core.module';
 
+//Import services
+import { MatchService } from './components/match/match.service';
+
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 import { MatchComponent } from './components/match/match.component';
+import { MatchesListComponent } from './shared/components/matches-list/matches-list.component';
+import { MatchItemComponent } from './shared/components/match-item/match-item.component';
+import { MatchDetailsComponent } from './shared/components/match-details/match-details.component';
 
 
 @NgModule({
@@ -31,10 +37,16 @@ import { MatchComponent } from './components/match/match.component';
     AppComponent,
     PageNotFoundComponent,
     MatchComponent,
+    MatchesListComponent,
+    MatchItemComponent,
+    MatchDetailsComponent,
   ],
   exports:[
   ],
-  providers: [MatIconRegistry],
+  providers: [
+    MatIconRegistry,
+    MatchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
