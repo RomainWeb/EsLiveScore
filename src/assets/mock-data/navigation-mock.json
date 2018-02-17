@@ -6,6 +6,7 @@
                 "title": "Digital Training Intro",
                 "description": "Description Digital Training Intro",
                 "IsActive": true,
+                "icon": "fa-tasks",
                 "chapters": [
                     {
                         "uid": 0,
@@ -62,6 +63,7 @@
                 "title": "iPPM Program",
                 "description": "description iPPM Program",
                 "IsActive": true,
+                "icon": "fa-book",
                 "chapters": [
                     {
                         "uid": 3,
@@ -148,6 +150,63 @@
                                 "createdDate": "",
                                 "createrUser": "",
                                 "type": "simulation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": 2,
+                "title": "Using iPPM",
+                "description": "Description Using iPPM",
+                "IsActive": true,
+                "icon": "fa-pencil-alt",
+                "chapters": [
+                    {
+                        "uid": 0,
+                        "title": "Digital Training Intro",
+                        "description": "Description Digital Training Intro",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 0,
+                                "title": "Digital Training Intro",
+                                "description": "Description Digital Training Intro",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "uid": 1,
+                        "title": "Digital Training Intro",
+                        "description": "Description Digital Training Intro",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 1,
+                                "title": "Other resources",
+                                "description": "Description Other resources",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "uid": 2,
+                        "title": "Digital Training Intro",
+                        "description": "Description Digital Training Intro",
+                        "isActive": true,
+                        "pages": [
+                            {
+                                "uid": 2,
+                                "title": "What's new",
+                                "description": "Description What's new",
+                                "createdDate": "",
+                                "createrUser": "",
+                                "type": "text"
                             }
                         ]
                     }

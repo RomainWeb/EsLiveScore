@@ -15,8 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
+import { MatchComponent } from './components/match/match.component';
 
 
 @NgModule({
@@ -29,8 +29,8 @@ import { PageNotFoundComponent } from './components/error/page-not-found/page-no
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
     PageNotFoundComponent,
+    MatchComponent,
   ],
   exports:[
   ],

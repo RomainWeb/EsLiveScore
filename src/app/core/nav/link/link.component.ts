@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LinkComponent implements OnInit {
   @Input() link: any;
-  @Input() isActive: boolean;
 
   constructor() { }
 

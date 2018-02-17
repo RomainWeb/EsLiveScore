@@ -1,5 +1,5 @@
 <!-- app.component.html -->
-<mat-sidenav-container>
+<mat-sidenav-container class="container">
   <mat-sidenav class="z-depth-2" #sidenav mode="side">
     <esls-sidenav></esls-sidenav>
   </mat-sidenav>
@@ -12,5 +12,11 @@
     <!-- Router Outlet here -->
     <router-outlet></router-outlet>
 
+    <td-layout-footer>
+      <div layout="row" layout-align="start center">
+        <span class="mat-caption"><a mat-button href="http://activ-way.com" target="_blank">Esport Flash Resultat</a> &copy; 2018</span>
+        <span class="mat-caption" flex>Contact Us</span>
+      </div>
+    </td-layout-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,6 +1,9 @@
 <a mat-tab-link 
-    [active]="isActive"
-    [routerLink]="link.route">
-        <span><mat-icon matListIcon fontSet="fa" [fontIcon]="link.icon"></mat-icon></span>
-        <span hide-md>{{ link.title }}</span>
+    routerLinkActive 
+    #rla="routerLinkActive"
+    [active]="rla.isActive">
+        <span [matTooltip]="link.name">
+            <img src="assets/img/{{ link.img }}" class="mat-tab-link-img">
+            <span hide-md>{{ link.slug }}</span>
+        </span>
 </a>

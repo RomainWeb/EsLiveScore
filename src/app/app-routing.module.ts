@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
+import { MatchComponent } from './components/match/match.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
  
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: MatchComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

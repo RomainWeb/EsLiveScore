@@ -8,10 +8,13 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 export class NavComponent implements OnInit, AfterViewInit {
 
   navList: any = [
-    { title: "Home", icon: 'fa-home', route: "/" },
-    { title: "Digital Training Intro", icon: 'fa-tasks', route: "/" },
-    { title: "iPPM Program", icon: 'fa-book', route: "/" },
-    { title: "Using iPPM", icon: 'fa-pencil-alt', route: "/" }
+    { name: "League of legends", slug: "LOL", img: 'lol.png', route: "/" },
+    { name: "Defense of the Ancients 2", slug: "Dota2", img: 'dota2.png', route: "/" },
+    { name: "Starcraft 2", slug: "SC2", img: 'sc2.png', route: "/" },
+    { name: "Counter Strike global offensive", slug: "CSGO", img: 'csgo.png', route: "/" },
+    { name: "Heroes of the storm", slug: "HOTS", img: 'hots.png', route: "/" },
+    { name: "Overwatch", slug: "Overwatch", img: 'overwatch.png', route: "/" },
+    { name: "Fifa 18", slug: "FIFA", img: 'fifa.png', route: "/" },
   ]
 
   constructor() { }
