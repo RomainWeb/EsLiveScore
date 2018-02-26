@@ -13,4 +13,9 @@ export class MatchesListComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  expandPanel(event: Event){
+    event.stopPropagation();
+    console.log(this)
+  }
 }

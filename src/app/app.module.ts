@@ -16,6 +16,7 @@ import { CoreModule } from './core/core.module';
 
 //Import services
 import { MatchService } from './components/match/match.service';
+import { TeamService } from './components/team/team.service';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
@@ -23,6 +24,8 @@ import { MatchComponent } from './components/match/match.component';
 import { MatchesListComponent } from './shared/components/matches-list/matches-list.component';
 import { MatchItemComponent } from './shared/components/match-item/match-item.component';
 import { MatchDetailsComponent } from './shared/components/match-details/match-details.component';
+import { TeamListComponent } from './shared/components/team-list/team-list.component';
+import { TeamComponent } from './components/team/team.component';
 
 
 @NgModule({
@@ -40,12 +43,15 @@ import { MatchDetailsComponent } from './shared/components/match-details/match-d
     MatchesListComponent,
     MatchItemComponent,
     MatchDetailsComponent,
+    TeamListComponent,
+    TeamComponent,
   ],
   exports:[
   ],
   providers: [
     MatIconRegistry,
-    MatchService
+    MatchService,
+    TeamService
   ],
   bootstrap: [AppComponent]
 })

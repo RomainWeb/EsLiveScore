@@ -9,8 +9,12 @@
     <esls-header (sidenavToggled)="toggleSidenav($event)"></esls-header>
     <esls-nav></esls-nav>
 
-    <!-- Router Outlet here -->
-    <router-outlet></router-outlet>
+    <div layout="row" layout-align="center stretch"> 
+      <esls-team flex="20"></esls-team>
+
+      <!-- Router Outlet here -->
+      <router-outlet></router-outlet>
+    </div>
 
     <td-layout-footer>
       <div layout="row" layout-align="start center">

@@ -9,10 +9,17 @@ import { AppConfig } from '../../app-config';
 export class MatchService {
     constructor(private _http: HttpClient) { }
   
-  getMatchesUpcoming(): Observable<any>{
+  getMatchesUpcoming(): Observable<Match[]>{
     return this._http
-              .get<any>(`${AppConfig.API_PANDASCORE_URL}/matches/upcoming`, {
-                headers: AppConfig.API_PANDASCORE_HEADER
-              });
+                .get<Match[]>(`${AppConfig.API_PANDASCORE_URL}/matches/upcoming`, {
+                  headers: AppConfig.API_PANDASCORE_HEADER
+                });
+  }
+
+  getMatchesPast(): Observable<Match[]>{
+    return this._http
+                .get<Match[]>(`${AppConfig.API_PANDASCORE_URL}/matches/past`, {
+                  headers: AppConfig.API_PANDASCORE_HEADER
+                });;
   }
 }

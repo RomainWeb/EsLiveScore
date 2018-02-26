@@ -9,10 +9,17 @@ import { Match } from '../../models/match.model';
 })
 export class MatchItemComponent implements OnInit {
   @Input() match: Match;
+  isFavorite: boolean;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  changeFav(event:Event){
+    event.stopPropagation();
+    this.isFavorite = !this.isFavorite;
+  }
+  
 
 }

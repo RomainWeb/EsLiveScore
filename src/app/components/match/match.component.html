@@ -7,3 +7,14 @@
     <esls-matches-list [matchesList]="matchesUpcoming | async"></esls-matches-list>
   </mat-card-content>
 </mat-card>
+
+<mat-card>
+  <mat-card-title>
+    Matches past
+  </mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <esls-matches-list [matchesList]="matchesPast | async"></esls-matches-list>
+  </mat-card-content>
+</mat-card>
+  

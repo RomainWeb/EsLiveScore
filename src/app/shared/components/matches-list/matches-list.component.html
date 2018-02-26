@@ -1,4 +1,11 @@
 <mat-progress-bar mode="indeterminate" *ngIf="!matchesList"></mat-progress-bar>
 <mat-accordion>
-  <esls-match-item *ngFor="let match of matchesList" [match]="match"></esls-match-item>
+  <mat-expansion-panel *ngFor="let match of matchesList; index as i" #i>
+    <mat-expansion-panel-header 
+      [collapsedHeight]="'70px'" 
+      [expandedHeight]="'78px'" 
+      class="hoverable">
+      <esls-match-item [match]="match" flex></esls-match-item>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
 </mat-accordion>

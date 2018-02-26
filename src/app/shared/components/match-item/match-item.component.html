@@ -1,15 +1,29 @@
-<mat-expansion-panel>
-  <mat-expansion-panel-header  class="hoverable">
-      <mat-panel-title>
-        {{ match.name }}
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    
-  <mat-form-field>
-    <input matInput placeholder="First name">
-  </mat-form-field>
+<div layout="row" layout-align="start center" layout-padding layout-margin>
+  <span>
+    <mat-icon fontSet="far" fontIcon="fa-star" [ngClass]="{'tc-yellow-700' : isFavorite}" (click)="changeFav($event)"></mat-icon>
+  </span>
+  <span flex="10">
+    {{ match.begin_at | date: 'shortTime' }}<br />
+    {{ match.begin_at | date: 'dd-MM' }}
+  </span>
+  <span flex="10">
+    <img [src]="match.league.image_url ? match.league.image_url : 'assets/img/empty-logo.png'" 
+      [matTooltip]="match.league.name"
+      class="logo-match"/>
+    BO {{ match.number_of_games }}
+  </span>
+  <span flex>
+    <span layout="column" layout-align="stretched start">
+      <div *ngFor="let team of match.opponents; first as isFirst" >
+        <img [src]="team.opponent.image_url ? team.opponent.image_url : 'assets/img/empty-logo.png'" 
+        [matTooltip]="team.opponent.name"
+        class="logo-team" />
+        {{ team.opponent.name }}
+        <mat-divider *ngIf="isFirst" [inset]="true"></mat-divider>
+      </div>
+    </span>
+  </span>
+  <span flex>
 
-  <mat-form-field>
-    <input matInput placeholder="Age">
-  </mat-form-field>
-</mat-expansion-panel>
+  </span>
+</div>
