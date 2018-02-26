@@ -26,6 +26,7 @@ import { MatchItemComponent } from './shared/components/match-item/match-item.co
 import { MatchDetailsComponent } from './shared/components/match-details/match-details.component';
 import { TeamListComponent } from './shared/components/team-list/team-list.component';
 import { TeamComponent } from './components/team/team.component';
+import { ActualityComponent } from './components/actuality/actuality.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { TeamComponent } from './components/team/team.component';
     MatchDetailsComponent,
     TeamListComponent,
     TeamComponent,
+    ActualityComponent,
   ],
   exports:[
   ],
