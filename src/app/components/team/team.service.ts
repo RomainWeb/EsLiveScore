@@ -9,9 +9,15 @@ export class TeamService {
 
   constructor(private _http: HttpClient) { }
 
-  getTeamsList(): Observable<Team[]>{
+  getTeams(): Observable<Team[]>{
     return this._http.get<Team[]>(`${AppConfig.API_PANDASCORE_URL}/teams`, {
       headers: AppConfig.API_PANDASCORE_HEADER
     });
+  }
+
+  getTeam(id: number): Observable<Team>{
+    return this._http.get<Team>(`${AppConfig.API_PANDASCORE_URL}/teams/${id}`, {
+      headers: AppConfig.API_PANDASCORE_HEADER
+    })
   }
 }

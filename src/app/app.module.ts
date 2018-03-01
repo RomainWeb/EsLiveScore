@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 //Import Core Module
 import { CoreModule } from './core/core.module';
+import { TeamModule } from './components/team/team.module';
 
 //Import services
 import { MatchService } from './components/match/match.service';
@@ -21,13 +22,14 @@ import { TeamService } from './components/team/team.service';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 import { MatchComponent } from './components/match/match.component';
-import { MatchesListComponent } from './shared/components/matches-list/matches-list.component';
-import { MatchItemComponent } from './shared/components/match-item/match-item.component';
-import { MatchDetailsComponent } from './shared/components/match-details/match-details.component';
-import { TeamListComponent } from './shared/components/team-list/team-list.component';
+import { MatchesListComponent } from './shared/components/match/matches-list/matches-list.component';
+import { MatchItemComponent } from './shared/components/match/match-item/match-item.component';
+import { MatchDetailsComponent } from './shared/components/match/match-details/match-details.component';
+import { TeamListComponent } from './shared/components/team/team-list/team-list.component';
 import { TeamComponent } from './components/team/team.component';
 import { ActualityComponent } from './components/actuality/actuality.component';
-import { TeamItemComponent } from './shared/components/team-item/team-item.component';
+import { TeamListItemComponent } from './shared/components/team/team-list-item/team-list-item.component';
+import { TeamDetailsComponent } from './shared/components/team/team-details/team-details.component';
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { TeamItemComponent } from './shared/components/team-item/team-item.compo
     BrowserAnimationsModule,
     /** App Modules */
     CoreModule,
+    TeamModule,
     AppRoutingModule,
   ],
   declarations: [
@@ -48,7 +51,8 @@ import { TeamItemComponent } from './shared/components/team-item/team-item.compo
     TeamListComponent,
     TeamComponent,
     ActualityComponent,
-    TeamItemComponent,
+    TeamListItemComponent,
+    TeamDetailsComponent,
   ],
   exports:[
   ],

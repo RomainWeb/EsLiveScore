@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TeamService } from './team.service';
 import { Team } from '../../shared/models/team.model';
 import { Observable } from 'rxjs';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'esls-team',
@@ -14,7 +16,13 @@ export class TeamComponent implements OnInit {
   constructor(private _teamService: TeamService) { }
 
   ngOnInit() {
-    this.teams = this._teamService.getTeamsList();
+    this.teams = this._teamService
+        .getTeams()
+        .map(data => {
+          return data.filter(data => {
+            return !!data.name;
+          })
+        });
   }
 
 }

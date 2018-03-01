@@ -1,4 +1,7 @@
-<mat-progress-bar mode="indeterminate" *ngIf="!matchesList"></mat-progress-bar>
+<!-- <mat-progress-bar mode="indeterminate" *ngIf="!matchesList"></mat-progress-bar> -->
+<div *ngIf="!matchesList">
+  <p class="loading-message tc-grey-700 text-upper text-lg">Loading data...</p>
+</div>
 <mat-accordion>
   <mat-expansion-panel *ngFor="let match of matchesList; index as i" #i>
     <mat-expansion-panel-header 

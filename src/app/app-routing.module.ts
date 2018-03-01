@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MatchComponent } from './components/match/match.component';
+import {TeamComponent } from './components/team/team.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
  
 const appRoutes: Routes = [
   { path: '', component: MatchComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

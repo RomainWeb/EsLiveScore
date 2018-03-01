@@ -1,0 +1,26 @@
+<mat-card *ngIf="team$ | async as team">
+  <mat-card-title>
+    <div layout="row">
+      <span>Team: {{ team.name }}</span>
+      <span flex></span>
+      <span>Game: {{ team.current_videogame ? team.current_videogame.name : 'none' }}</span>
+    </div>
+  </mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div layout="row" layout-align="center center">
+      <img [src]="team.image_url ? team.image_url : 'assets/img/empty-logo.png'" class="logo-team" />
+    </div>
+    
+    <div layout="column" *ngIf="team.players as players">
+        <div>
+          {{ team.name }}: lineUp for {{ team.current_videogame ? team.current_videogame.name : 'none' }}
+        </div>
+        <mat-list>
+          <mat-list-item *ngFor="let player of players">
+            <h4 mat-line>{{player.name}}</h4>
+          </mat-list-item>
+        </mat-list>
+    </div>
+  </mat-card-content>
+</mat-card>

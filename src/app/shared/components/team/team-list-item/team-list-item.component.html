@@ -1,0 +1,6 @@
+<mat-list-item>
+    <a [routerLink]="['/team', team.id]">
+        <img [src]="team.image_url ? team.image_url : 'assets/img/empty-logo.png'" class="logo-team" />
+        {{ team.name }} 
+    </a>
+</mat-list-item>
