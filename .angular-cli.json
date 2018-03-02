@@ -27,7 +27,7 @@
         "../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css"
       ],
       "scripts": [
-
+        "../node_modules/underscore/underscore.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

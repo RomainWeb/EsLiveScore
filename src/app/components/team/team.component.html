@@ -1,9 +1,19 @@
 <mat-card>
   <mat-card-title>
-    Teams
+    Search a team
   </mat-card-title>
   <mat-divider></mat-divider>
+  <td-search-box  
+      placeholder="Search here" 
+      [(ngModel)]="searchInputTerm" 
+      [showUnderline]="false" 
+      [alwaysVisible]="true"
+      [debounce]="500" 
+      (searchDebounce)="searchDebounce($event)" 
+      (clear)="clear($event)">
+  </td-search-box>
+  <mat-divider></mat-divider>
   <mat-card-content>
-    <esls-team-list [teams]="teams | async"></esls-team-list>
+    <esls-team-list [teams]="teams$ | async"></esls-team-list>
   </mat-card-content>
 </mat-card>

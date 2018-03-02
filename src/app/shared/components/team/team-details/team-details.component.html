@@ -12,15 +12,24 @@
       <img [src]="team.image_url ? team.image_url : 'assets/img/empty-logo.png'" class="logo-team" />
     </div>
     
-    <div layout="column" *ngIf="team.players as players">
-        <div>
-          {{ team.name }}: lineUp for {{ team.current_videogame ? team.current_videogame.name : 'none' }}
+    <div layout="column" *ngIf="!!team.players">
+        <div class="push-md">
+          <span class="primary">{{ team.name }}: lineUp for {{ team.current_videogame ? team.current_videogame.name : 'none' }}</span>
         </div>
-        <mat-list>
-          <mat-list-item *ngFor="let player of players">
-            <h4 mat-line>{{player.name}}</h4>
-          </mat-list-item>
-        </mat-list>
+        <div layout="row" layout-align="space-between start">
+          <div *ngFor="let player of team.players">
+            <img [src]="player.image_url ? player.image_url : 'assets/img/empty-avatar.png'"  class="player-photo"/>
+            <mat-list>
+              <mat-list-item><b>Name</b>: {{ player.name }}</mat-list-item>
+              <mat-list-item>Firstname: {{ player.first_name }}</mat-list-item>
+              <mat-list-item>Lastname: {{ player.last_name }}</mat-list-item>
+            </mat-list>
+          </div>
+        </div>
     </div>
   </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-raised-button [routerLink]="['/team']" color="accent">Back to list</button>
+  </mat-card-actions>
 </mat-card>

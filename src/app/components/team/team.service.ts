@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Team } from '../../shared/models/team.model';
 import { AppConfig } from '../../app-config';
+import * as _ from 'underscore';
+
 
 @Injectable()
 export class TeamService {
@@ -20,4 +22,17 @@ export class TeamService {
       headers: AppConfig.API_PANDASCORE_HEADER
     })
   }
+
+  // searchTeam(teams: Observable<Team[]>, term: Observable<string>){
+  //   console.log(teams)
+  //   return term.debounceTime(500)
+  //   .distinctUntilChanged()
+  //   .switchMap(term => {
+  //     console.log(term);
+  //     return teams.map((data: Team[]) => data.filter(data => {
+  //       if(data.name.toLowerCase().match(term) || term === "")
+  //         return data;
+  //     }))
+  //   })
+  // }
 }

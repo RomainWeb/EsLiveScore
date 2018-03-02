@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from './team.service';
 import { Team } from '../../shared/models/team.model';
-import { Observable } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/switchMap';
+import * as _ from 'underscore';
 
 @Component({
   selector: 'esls-team',
@@ -11,18 +15,25 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
-  teams: Observable<Team[]>;
+  teams$: Observable<Team[]>;
+  searchInputTerm: string = "";
 
   constructor(private _teamService: TeamService) { }
 
   ngOnInit() {
-    this.teams = this._teamService
-        .getTeams()
-        .map(data => {
-          return data.filter(data => {
-            return !!data.name;
-          })
-        });
+    this.searchTeam(this.searchInputTerm);
   }
 
+  searchDebounce(e: Event){
+    this.searchTeam(this.searchInputTerm);
+  }
+
+  searchTeam(term: string){
+    this.teams$ = this._teamService.getTeams()
+    .map((teams: Team[]) => {
+      return teams.filter((team: Team) => {
+        return team.name.toLowerCase().includes(this.searchInputTerm.toLowerCase())
+      })
+    })
+  }
 }

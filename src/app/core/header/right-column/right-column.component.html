@@ -1,14 +1,11 @@
-<div layout="row" layout-align="end center" flex>
-  <button mat-icon-button matTooltip="Log in">
-    <mat-icon fontSet="fas" fontIcon="fa-sign-in-alt"></mat-icon>
+<div layout="row">
+  <button [routerLink]="['/team']" mat-button matTooltip="Search a team">
+    Teams
   </button>
-  <button mat-icon-button matTooltip="Dashboard">
-    <mat-icon fontSet="fas" fontIcon="fa-chart-line"></mat-icon>
+  <button mat-button matTooltip="See all actualities">
+    Actualities
   </button>
-  <button mat-icon-button matTooltip="Administration">
-    <mat-icon fontSet="fas" fontIcon="fa-terminal"></mat-icon>
-  </button>
-  <button mat-icon-button matTooltip="Satisfaction">
-    <mat-icon fontSet="fab" fontIcon="fa-gratipay"></mat-icon>
+  <button mat-button matTooltip="Search a tournament">
+    Tournaments
   </button>
 </div>
